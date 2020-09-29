@@ -137,6 +137,8 @@ public class FaceMain extends javax.swing.JFrame {
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
         Color newColor = JColorChooser.showDialog(this, "Pick New Face Color", Color.red);
         f.setColor(newColor);
+        Color newColor2 = JColorChooser.showDialog(this, "Pick New Eye Face Color", Color.red);
+        f.setEColor(newColor2);
         if(m==true){
         f.draw(true);
         }

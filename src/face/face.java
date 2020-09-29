@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 
 public class face {
     private int px,py,diameter;
-    private Color color;
+    private Color color,ec;
     private Graphics g;
     
     
@@ -19,10 +19,14 @@ public class face {
         
         diameter =100;
         color=Color.red;
+        ec=Color.black;
         
     }
     public void setColor(Color c){
     color = c; 
+        }
+    public void setEColor(Color c){
+    ec = c; 
         }
     
     
@@ -52,23 +56,23 @@ public class face {
         g.fillOval(px,py,diameter,diameter);
     }
     private void drawEyes(){
-        g.setColor(Color.black);
+        g.setColor(ec);
         g.fillOval(px+diameter/10,py+diameter/4,diameter/4,diameter/4);
         g.fillOval(px+diameter/2+diameter/10,py+diameter/4,diameter/4,diameter/4);
         
     }
     private void drawMouth(){
         g.setColor(Color.black);
-        g.drawLine(px+(diameter/8),py+(diameter*2/4),px+(diameter/5),py+(diameter*2/3));
-        g.drawLine(px+(diameter-(diameter*1/8)),py+(diameter*2/4),px+(diameter-(diameter*1/4)),py+(diameter*2/3));
-        g.drawLine(px+(diameter/5),py+(diameter*2/3),px+(diameter-(diameter*1/4)),py+(diameter*2/3));
+        g.drawLine(px+(diameter/8),py+(diameter*2/3),px+(diameter/5),py+(diameter*3/4));
+        g.drawLine(px+(diameter-(diameter*1/8)),py+(diameter*2/3),px+(diameter-(diameter*1/4)),py+(diameter*3/4));
+        g.drawLine(px+(diameter/5),py+(diameter*3/4),px+(diameter-(diameter*1/4)),py+(diameter*3/4));
 
     }
     private void drawfrown(){
         g.setColor(Color.black);
-        g.drawLine(px+(diameter/8),py+(diameter*3/4),px+(diameter/5),py+(diameter*2/3));
-        g.drawLine(px+(diameter-(diameter*1/8)),py+(diameter*3/4),px+(diameter-(diameter*1/4)),py+(diameter*2/3));
-        g.drawLine(px+(diameter/5),py+(diameter*2/3),px+(diameter-(diameter*1/4)),py+(diameter*2/3));
+        g.drawLine(px+(diameter/8),py+(diameter*4/5),px+(diameter/5),py+(diameter*3/4));
+        g.drawLine(px+(diameter-(diameter*1/8)),py+(diameter*4/5),px+(diameter-(diameter*1/4)),py+(diameter*3/4));
+        g.drawLine(px+(diameter/5),py+(diameter*3/4),px+(diameter-(diameter*1/4)),py+(diameter*3/4));
     }
     public void erase(){
         g.setColor(Color.white);
