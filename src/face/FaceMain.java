@@ -1,4 +1,3 @@
-
 package face;
 
 import java.awt.Color;
