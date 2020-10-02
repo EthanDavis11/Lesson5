@@ -17,13 +17,13 @@ static int i=1,maxm,maxr;
             maxm=mon;
             maxr=1;
         while(mon>0){
-            mon-=1;
             i += 1;
             d1.roll();
             d2.roll();
             if(d1.getNum() + d2.getNum()==7){
                 mon+=4;
             }
+            else mon -=1;
             if(mon>maxm){
                 maxm=mon;
                 maxr=i;
